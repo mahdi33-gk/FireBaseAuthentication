@@ -4,8 +4,8 @@ import auth from './firebase.init';
 
 
 const Login = () => {
+
     const clickHandler = () => {
-        console.log('login confirmed!')
         signInWithPopup(auth, provider)
         .then((result)=>{
             console.log(result)
