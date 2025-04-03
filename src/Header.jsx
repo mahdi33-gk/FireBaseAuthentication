@@ -1,9 +1,11 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <div>
-            <h4>this is header</h4>
+        <div style={{display:'flex',gap:'8px'}}>
+            <NavLink to={'/'}>Home</NavLink>
+            <NavLink to={'/login'}>Login</NavLink>
         </div>
     );
 };
