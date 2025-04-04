@@ -30,8 +30,8 @@ const Login = () => {
     return (
         <div>
             <h3>Login page</h3>
-            <button onClick={clickHandler}>Login with google</button>
-            {user? <button onClick={handlesignOut}>Sign out</button>:null}
+            
+            {user? <button onClick={handlesignOut}>Sign out</button>:<button onClick={clickHandler}>Login with google</button>}
             {
                 user && <div>
                     <h3>{user.displayName
