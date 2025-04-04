@@ -20,7 +20,7 @@ const Login = () => {
     const handlesignOut = () =>{
         signOut(auth)
         .then(()=>{
-            console.log('signout done')
+            setuser(null)
         })
         .catch(()=>{
             console.log('found err')
@@ -31,7 +31,7 @@ const Login = () => {
         <div>
             <h3>Login page</h3>
             <button onClick={clickHandler}>Login with google</button>
-            <button onClick={handlesignOut}>Sign out</button>
+            {user? <button onClick={handlesignOut}>Sign out</button>:null}
             {
                 user && <div>
                     <h3>{user.displayName
